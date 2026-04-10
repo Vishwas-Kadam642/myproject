@@ -6,14 +6,20 @@ function App() {
   let [counter, setCounter] = useState(1);
   
   const addValue = () => {
-
+    if(counter >= 20 ){
+      alert("counter should be between 0 and 20");
+      return;
+    }
     setCounter(counter + 1);
     console.log("Added", counter + 1);
     
   }
 
   const removeValue = () => {
-
+      if (counter <=0){
+      alert("counter should be between 0 and 20");
+      return;
+    }
     setCounter(counter - 1);
     console.log("Removed", counter - 1);
   }
